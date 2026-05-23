@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fashclot - Premium E-Commerce Marketplace Platform</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              DEFAULT: '#1c4d4f',
+              light: '#246164',
+              dark: '#123335',
+              accent: '#0ea5e9',
+              hot: '#f43f5e',
+              sale: '#0d9488'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          boxShadow: {
+            'mega': '0 25px 50px -12px rgba(0, 0, 0, 0.08)',
+            'premium': '0 10px 30px -5px rgba(28, 77, 79, 0.05)',
+          }
+        }
+      }
+    }
+  </script>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; overflow-x: hidden; }
+    ::-webkit-scrollbar { width: 10px; }
+    ::-webkit-scrollbar-track { background: #f8fafc; }
+    ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 5px; }
+    ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+    .dropdown-animate {
+      opacity: 0;
+      transform: translateY(10px);
+      pointer-events: none;
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .group:hover .dropdown-animate {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+  </style>
+</head>
+<body data-page="home" class="bg-[#fcfdfd] text-slate-800 antialiased selection:bg-brand selection:text-white">
+
+  <div class="w-full bg-brand text-teal-100 text-xs py-2 px-4 text-center font-medium tracking-wide border-b border-teal-900/30">
+    🔥 Mid-Season Sale is Live! Use Code <span class="text-white font-bold underline">FASH40</span> to get 40% OFF on premium clothing items.
+  </div>
+
+  <header class="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <div class="flex-shrink-0">
+        <a href="#" class="text-3xl font-black italic tracking-tight text-slate-900 select-none">
+          EZ_Bebsha<span class="text-brand">.</span>
+        </a>
+      </div>
+
+      <nav class="hidden lg:flex items-center space-x-7 h-full">
+        <a href="#" class="text-[15px] font-semibold text-brand h-full flex items-center border-b-2 border-brand transition-colors">Home</a>
+        
+        <div class="relative group h-full flex items-center">
+          <button class="text-[15px] font-medium text-slate-600 hover:text-brand transition-colors flex items-center gap-1 py-4">
+            Shop 
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-brand transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </button>
+          
+          <div class="dropdown-animate absolute top-full left-1/2 -translate-x-1/3 w-[820px] bg-white border border-slate-100 rounded-b-2xl shadow-mega p-8 grid grid-cols-4 gap-6 z-50">
+            <div>
+              <h4 class="text-xs font-bold text-slate-900 mb-4 uppercase tracking-wider border-b border-slate-100 pb-2">Product Types</h4>
+              <ul class="space-y-2.5 text-sm text-slate-500 font-medium">
+                <li><a href="#latest-products" class="hover:text-brand transition-colors flex items-center gap-1"><span>Simple Product</span></a></li>
+                <li><a href="#latest-products" class="hover:text-brand transition-colors">Grouped Product</a></li>
+                <li><a href="#latest-products" class="hover:text-brand transition-colors">Variable Product</a></li>
+                <li><a href="#latest-products" class="hover:text-brand transition-colors">Sale Product</a></li>
+                <li><a href="#latest-products" class="hover:text-brand transition-colors">Upsell Products</a></li>
+                <li><a href="#latest-products" class="hover:text-brand transition-colors">Cross Sell Product</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-xs font-bold text-slate-900 mb-4 uppercase tracking-wider border-b border-slate-100 pb-2">Prestashop Pages</h4>
+              <ul class="space-y-2.5 text-sm text-slate-500 font-medium">
+                <li><a href="#" class="hover:text-brand transition-colors">Checkout Page</a></li>
+                <li><a href="#" class="hover:text-brand transition-colors">Category Page</a></li>
+                <li><a href="#" class="hover:text-brand transition-colors">Shopping Cart</a></li>
+                <li><a href="#" class="hover:text-brand transition-colors">My account</a></li>
+                <li><a href="#" class="hover:text-brand transition-colors">Shop Ajax Filter</a></li>
+                <li><a href="#" class="hover:text-brand transition-colors">Our Stores</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-xs font-bold text-slate-900 mb-4 uppercase tracking-wider border-b border-slate-100 pb-2">Product Features</h4>
+              <ul class="space-y-2.5 text-sm text-slate-500 font-medium">
+                <li><a href="#" class="hover:text-brand transition-colors">Progress Bar</a></li>
+                <li><a href="#" class="hover:text-brand transition-colors">Product Brand</a></li>
+                <li><a href="#" class="hover:text-brand transition-colors">Countdown Timer</a></li>
+                <li><a href="#" class="hover:text-brand transition-colors">Custom Tabs</a></li>
+                <li><a href="#" class="hover:text-brand transition-colors">Product Gallery</a></li>
+                <li><a href="#" class="hover:text-brand transition-colors">Stock Label</a></li>
+              </ul>
+            </div>
+            <div class="bg-slate-50 rounded-2xl p-5 flex flex-col justify-between border border-slate-100 relative overflow-hidden group/mega-banner">
+              <div class="absolute inset-0 bg-cover bg-center opacity-10 mix-blend-overlay transition-transform duration-500 group-hover/mega-banner:scale-105" style="background-image: url('https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=400&q=80');"></div>
+              <div class="relative z-10">
+                <span class="text-[9px] font-black bg-amber-500 text-white px-2 py-0.5 rounded-md uppercase tracking-wider">Special Offer</span>
+                <h5 class="text-xl font-black text-slate-900 mt-3 leading-tight">Discount Up To<br><span class="text-brand text-2xl">20% OFF</span></h5>
+              </div>
+              <div class="relative z-10 mt-6 pt-4 border-t border-slate-200/60 flex items-baseline justify-between">
+                <span class="text-xs font-bold text-slate-400">Top Deals</span>
+                <span class="text-xl font-black text-slate-900">$50</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative group h-full flex items-center">
+          <button class="text-[15px] font-medium text-slate-600 hover:text-brand transition-colors flex items-center gap-1.5 py-4">
+            Categories 
+            <span class="bg-brand text-white text-[9px] font-extrabold px-1.5 py-0.5 rounded-md tracking-wider uppercase transform -translate-y-0.5 shadow-sm">SALE</span>
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-brand transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </button>
+          
+          <div class="dropdown-animate absolute top-full left-1/2 -translate-x-1/2 w-[980px] bg-white border border-slate-100 rounded-b-2xl shadow-mega p-8 grid grid-cols-12 gap-8 z-50">
+            <div class="col-span-7 grid grid-cols-3 gap-6">
+              <div>
+                <h4 class="text-sm font-bold text-slate-900 mb-3 tracking-wide">Clothes</h4>
+                <ul class="space-y-2 text-xs font-medium text-slate-500">
+                  <li><a href="#latest-products" class="hover:text-brand">Dress</a></li>
+                  <li><a href="#latest-products" class="hover:text-brand">Pajamas</a></li>
+                  <li><a href="#latest-products" class="hover:text-brand">Pants</a></li>
+                  <li><a href="#latest-products" class="hover:text-brand">Sweatshirt</a></li>
+                </ul>
+                <h4 class="text-sm font-bold text-slate-900 mt-5 mb-3 tracking-wide">Infants</h4>
+                <ul class="space-y-2 text-xs font-medium text-slate-500">
+                  <li><a href="#latest-products" class="hover:text-brand">Bodysuits</a></li>
+                  <li><a href="#latest-products" class="hover:text-brand">Accessories</a></li>
+                  <li><a href="#latest-products" class="hover:text-brand">Rompers</a></li>
+                  <li><a href="#latest-products" class="hover:text-brand">Tshirts & Tops</a></li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="text-sm font-bold text-slate-900 mb-3 tracking-wide">Travelling</h4>
+                <ul class="space-y-2 text-xs font-medium text-slate-500">
+                  <li><a href="#latest-products" class="hover:text-brand">Backpacks</a></li>
+                  <li><a href="#latest-products" class="hover:text-brand">Laptop Bag</a></li>
+                  <li><a href="#latest-products" class="hover:text-brand">Tote Bag</a></li>
+                  <li><a href="#latest-products" class="hover:text-brand">Trolley Bag</a></li>
+                </ul>
+                <h4 class="text-sm font-bold text-slate-900 mt-5 mb-3 tracking-wide">Fashion & Style</h4>
+                <ul class="space-y-2 text-xs font-medium text-slate-500">
+                  <li><a href="#latest-products" class="hover:text-brand">Apparel</a></li>
+                  <li><a href="#latest-products" class="hover:text-brand">Boys</a></li>
+                  <li><a href="#latest-products" class="hover:text-brand">Footwear</a></li>
+                  <li><a href="#latest-products" class="hover:text-brand">Ties</a></li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="text-sm font-bold text-slate-900 mb-3 tracking-wide">Sports Wear</h4>
+                <ul class="space-y-2 text-xs font-medium text-slate-500">
+                  <li><a href="#latest-products" class="hover:text-brand">Activewear</a></li>
+                  <li><a href="#latest-products" class="hover:text-brand">Shorts</a></li>
+                  <li><a href="#latest-products" class="hover:text-brand">Sports Shoes</a></li>
+                  <li><a href="#latest-products" class="hover:text-brand">Jackets</a></li>
+                </ul>
+                <h4 class="text-sm font-bold text-slate-900 mt-5 mb-3 tracking-wide">Watches</h4>
+                <ul class="space-y-2 text-xs font-medium text-slate-500">
+                  <li><a href="#latest-products" class="hover:text-brand">Gold Analog</a></li>
+                  <li><a href="#latest-products" class="hover:text-brand">Philippe Patek</a></li>
+                  <li><a href="#latest-products" class="hover:text-brand">Swatch Watch</a></li>
+                  <li><a href="#latest-products" class="hover:text-brand">Timex Watch</a></li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="col-span-5 bg-slate-50/70 border-l border-slate-100 pl-6 flex flex-col justify-between">
+              <h4 class="text-sm font-bold text-slate-900 mb-4 tracking-wide text-center">Best Selling Items</h4>
+              <div class="grid grid-cols-2 gap-4">
+                <div class="bg-white p-2 rounded-xl border border-slate-100 flex items-center gap-3">
+                  <div class="w-12 h-14 bg-slate-100 rounded-lg flex-shrink-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=150&q=80');"></div>
+                  <div class="min-w-0">
+                    <p class="text-xs font-bold text-slate-800 truncate">Men Full Sleeve</p>
+                    <p class="text-xs font-black text-brand mt-0.5">$29.00</p>
+                  </div>
+                </div>
+                <div class="bg-white p-2 rounded-xl border border-slate-100 flex items-center gap-3">
+                  <div class="w-12 h-14 bg-slate-100 rounded-lg flex-shrink-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=150&q=80');"></div>
+                  <div class="min-w-0">
+                    <p class="text-xs font-bold text-slate-800 truncate">Round Neck Slim</p>
+                    <p class="text-xs font-black text-brand mt-0.5">$25.00</p>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-4 bg-brand rounded-xl p-3 text-white text-center text-xs font-bold tracking-wide">
+                🔥 Hot Selling Season 2026
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative group h-full flex items-center">
+          <button class="text-[15px] font-medium text-slate-600 hover:text-brand transition-colors flex items-center gap-1.5 py-4">
+            Products 
+            <span class="bg-rose-500 text-white text-[9px] font-extrabold px-1.5 py-0.5 rounded-md tracking-wider uppercase transform -translate-y-0.5 shadow-sm">HOT</span>
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-brand transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </button>
+          
+          <div class="dropdown-animate absolute top-full left-0 w-[540px] bg-white border border-slate-100 rounded-b-2xl shadow-mega p-6 grid grid-cols-2 gap-4 z-50">
+            <div class="space-y-4">
+              <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 border-b pb-1">Shop By Categories</h4>
+              <div class="grid grid-cols-2 gap-2 text-xs font-semibold text-slate-600">
+                <a href="#latest-products" class="p-2 hover:bg-slate-50 rounded-lg hover:text-brand">👕 T-Shirts</a>
+                <a href="#latest-products" class="p-2 hover:bg-slate-50 rounded-lg hover:text-brand">👟 Shoes</a>
+                <a href="#latest-products" class="p-2 hover:bg-slate-50 rounded-lg hover:text-brand">🕶️ Goggles</a>
+                <a href="#latest-products" class="p-2 hover:bg-slate-50 rounded-lg hover:text-brand">👜 Tote Bag</a>
+              </div>
+            </div>
+            <div class="bg-slate-50 rounded-xl p-4 flex flex-col justify-between border border-slate-100">
+              <span class="text-[9px] font-black bg-rose-500 text-white px-2 py-0.5 rounded-md uppercase self-start">Trending</span>
+              <p class="text-sm font-bold text-slate-800 mt-2">Check Top Rated Apparel Lines Selected By Professional Designers.</p>
+              <a href="#latest-products" class="text-xs font-black text-brand underline mt-3 inline-block">Explore Now</a>
+            </div>
+          </div>
+        </div>
+
+        <a href="#top-deals" class="text-[15px] font-medium text-slate-600 hover:text-brand transition-colors">Top Deals</a>
+        <a href="#latest-products" class="text-[15px] font-medium text-slate-600 hover:text-brand transition-colors">Latest Collection</a>
+      </nav>
+
+      <div class="flex items-center space-x-3.5">
+        <button id="searchBtnHeader" class="p-2.5 text-slate-700 hover:text-brand hover:bg-slate-100 rounded-full transition-all duration-200">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+        </button>
+        <button id="accountBtnHeader" class="p-2.5 text-slate-700 hover:text-brand hover:bg-slate-100 rounded-full transition-all duration-200">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+        </button>
+        <button id="cartBtnHeader" class="p-2.5 bg-brand text-white hover:bg-brand-dark rounded-full transition-all duration-200 relative shadow-sm flex items-center justify-center">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+          <span id="global-cart-count" class="absolute -top-1.5 -right-1.5 min-w-[20px] h-5 bg-rose-500 text-white text-[10px] font-black rounded-full flex items-center justify-center border-2 border-white px-1 shadow-sm transition-transform duration-300">0</span>
+        </button>
+        <button id="mobileMenuBtn" class="md:hidden p-2 text-slate-600 hover:text-brand focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+        </button>
+      </div>
+
+    </div>
+
+    <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-slate-200 px-4 py-4 space-y-3 shadow-lg">
+      <a href="#" class="block font-semibold text-slate-600 hover:text-brand">Home</a>
+      <a href="#" class="block font-semibold text-brand">Products</a>
+      <a href="#" class="block font-semibold text-slate-600 hover:text-brand">Categories</a>
+      <a href="#" class="block font-semibold text-slate-600 hover:text-brand">Contact</a>
+    </div>
+
+  </header>
+
+  <section class="relative w-full h-[580px] bg-slate-900 overflow-hidden group/hero">
+    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-[2000ms] group-hover/hero:scale-105" style="background-image: url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1600&q=80');"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-slate-950/80 via-slate-950/40 to-transparent"></div>
+    
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-center items-start text-white z-10">
+      <span class="text-xs font-black tracking-widest uppercase bg-brand text-teal-300 px-3.5 py-1.5 rounded-lg mb-5 shadow-lg animate-pulse">New Season Drop</span>
+      <h1 class="text-5xl md:text-7xl font-black tracking-tight leading-none mb-6">
+        Summer Women's<br><span class="text-teal-400">Clothing Premium Line</span>
+      </h1>
+      <p class="text-base md:text-lg font-medium max-w-xl text-slate-200 mb-8 leading-relaxed">Explore handcrafted sustainable boutique designs chosen explicitly by professional curators for premium fashion e-commerce marketplace landscape engine platforms.</p>
+      <div class="flex gap-4">
+        <a href="#latest-products" class="bg-brand hover:bg-brand-light text-white font-bold text-sm tracking-wider uppercase px-8 py-4 rounded-xl shadow-xl transition-all duration-300 hover:-translate-y-0.5">SHOP COLLECTION</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-white border-b border-slate-100 text-center relative overflow-hidden">
+    <div class="absolute inset-0 opacity-40 mix-blend-overlay bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:16px_16px]"></div>
+    <div class="max-w-4xl mx-auto px-4 relative z-10">
+      <h2 class="text-3xl md:text-5xl font-black text-slate-900 tracking-tight mb-3">Welcome To Our Store</h2>
+      <div class="w-20 h-1 bg-brand mx-auto rounded-full mb-8"></div>
+      <p class="text-slate-500 font-medium text-base md:text-lg leading-relaxed max-w-3xl mx-auto">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+      </p>
+      <button class="mt-8 bg-slate-900 hover:bg-brand text-white font-bold text-xs tracking-widest uppercase px-7 py-3.5 rounded-lg shadow-md transition-all duration-300">READ MORE</button>
+    </div>
+  </section>
+
+  <section id="top-deals" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-4 gap-10 items-center border-b border-slate-200/60">
+    <div class="space-y-4 text-center lg:text-left">
+      <h3 class="text-3xl font-black text-slate-900 tracking-tight">The New Collection</h3>
+      <p class="text-sm text-slate-500 leading-relaxed font-medium">It sounds like you're asking about new product arrivals for the year. This will help me give you the most relevant and up-to-date information!</p>
+      <a href="#latest-products" class="inline-block text-xs font-bold uppercase tracking-wider text-slate-900 border-b-2 border-slate-900 pb-1 hover:text-brand hover:border-brand transition-colors">SHOP NOW</a>
+    </div>
+    <div class="lg:col-span-3 grid grid-cols-1 sm:grid-cols-3 gap-6">
+      
+      <div class="bg-white rounded-2xl border border-slate-100 p-3.5 shadow-premium relative flex flex-col justify-between group/deal">
+        <div class="relative bg-slate-50 rounded-xl overflow-hidden aspect-[4/5] flex items-center justify-center bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=400&q=80');">
+          <span class="absolute top-3 left-3 text-[10px] font-black bg-rose-500 text-white px-2 py-0.5 rounded-md">-8%</span>
+          <div class="js-countdown absolute bottom-3 inset-x-3 bg-white/95 backdrop-blur-sm border border-slate-100 text-slate-900 text-xs font-black py-2 rounded-xl shadow-md text-center tracking-wider" data-hours="29">
+            01d : 05h : 23m : 39s
+          </div>
+        </div>
+        <div class="mt-4 text-center">
+          <p class="text-xs font-bold text-slate-400">StyleHub</p>
+          <h4 class="text-sm font-bold text-slate-800 truncate mt-0.5 group-hover/deal:text-brand transition-colors">Floral Pointelle Smocked Top</h4>
+          <div class="text-amber-400 text-xs mt-1.5">★★★★★</div>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl border border-slate-100 p-3.5 shadow-premium relative flex flex-col justify-between group/deal">
+        <div class="relative bg-slate-50 rounded-xl overflow-hidden aspect-[4/5] flex items-center justify-center bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=400&q=80');">
+          <div class="js-countdown absolute bottom-3 inset-x-3 bg-white/95 backdrop-blur-sm border border-slate-100 text-slate-900 text-xs font-black py-2 rounded-xl shadow-md text-center tracking-wider" data-hours="84">
+            03d : 12h : 40m : 12s
+          </div>
+        </div>
+        <div class="mt-4 text-center">
+          <p class="text-xs font-bold text-slate-400">Cartify</p>
+          <h4 class="text-sm font-bold text-slate-800 truncate mt-0.5 group-hover/deal:text-brand transition-colors">Jack Men's Short Sleeve Shirt</h4>
+          <div class="text-amber-400 text-xs mt-1.5">★★★★★</div>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl border border-slate-100 p-3.5 shadow-premium relative flex flex-col justify-between group/deal">
+        <div class="relative bg-slate-50 rounded-xl overflow-hidden aspect-[4/5] flex items-center justify-center bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1578587018452-892bacefd3f2?auto=format&fit=crop&w=400&q=80');">
+          <span class="absolute top-3 left-3 text-[10px] font-black bg-rose-500 text-white px-2 py-0.5 rounded-md">-12%</span>
+          <div class="js-countdown absolute bottom-3 inset-x-3 bg-white/95 backdrop-blur-sm border border-slate-100 text-slate-900 text-xs font-black py-2 rounded-xl shadow-md text-center tracking-wider" data-hours="19">
+            00d : 18h : 57m : 55s
+          </div>
+        </div>
+        <div class="mt-4 text-center">
+          <p class="text-xs font-bold text-slate-400">EcomZone</p>
+          <h4 class="text-sm font-bold text-slate-800 truncate mt-0.5 group-hover/deal:text-brand transition-colors">Women Pink Cotton Vest Combo</h4>
+          <div class="text-amber-400 text-xs mt-1.5">★★★★★</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="latest-products" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-black text-slate-900 tracking-tight">Latest Products Lineup</h2>
+      <div class="w-16 h-1 bg-brand mx-auto mt-3 rounded-full"></div>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+      <div class="product-card group w-full max-w-[340px] mx-auto bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col h-full relative cursor-pointer"
+        data-product-id="premium-fabric-1"
+        data-product-name="Premium Cotton Designer Fabric"
+        data-price="400"
+        data-old-price="500"
+        data-image="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=300&q=80"
+        data-min="1"
+        data-max="100">
+        <div class="p-4 bg-slate-50/50 rounded-t-2xl flex flex-col items-center justify-center grow relative aspect-square">
+          <div class="absolute top-3 left-3 border border-brand/20 rounded-full px-3 py-1 bg-white shadow-sm">
+            <span class="text-[9px] font-extrabold tracking-tight text-brand uppercase">FREE SHIPPING</span>
+          </div>
+          <div class="absolute top-3 right-3 w-10 h-10 rounded-full bg-emerald-500 text-white flex items-center justify-center font-black text-xs shadow-sm">
+            -20%
+          </div>
+          <div class="w-full h-full rounded-xl bg-cover bg-center transition-transform duration-300 group-hover:scale-105" style="background-image: url('https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=300&q=80');"></div>
+        </div>
+        <div class="p-5 flex flex-col gap-3">
+          <div>
+            <h3 class="text-base font-bold text-slate-800 tracking-tight leading-snug group-hover:text-brand transition-colors">Premium Cotton Designer Fabric</h3>
+            <span class="inline-block text-[10px] font-bold text-brand bg-teal-50 px-2.5 py-0.5 rounded-md mt-1.5">Brand Hub</span>
+          </div>
+          <div class="pt-3 border-t border-slate-100 flex justify-between items-center gap-2">
+            <div class="flex flex-col">
+              <span class="text-xs text-slate-400 line-through">৳500</span>
+              <span class="text-xl font-black text-brand">৳400<span class="text-[11px] font-medium text-slate-400">/pc</span></span>
+            </div>
+            <div class="text-right text-[11px] font-medium text-slate-400 space-y-0.5">
+              <div>Min: <span class="font-bold text-slate-700">1 pc</span></div>
+              <div>Max: <span class="font-bold text-slate-700">100 pc</span></div>
+            </div>
+          </div>
+          <div class="mt-2 pt-2 border-t border-slate-50 flex items-center justify-between gap-3">
+            <div class="quantity-controller flex items-center bg-slate-100 rounded-full p-1 border border-slate-200">
+              <button class="minus-btn w-7 h-7 rounded-full bg-white text-slate-600 hover:bg-brand hover:text-white flex items-center justify-center font-bold text-sm shadow-sm transition-colors">−</button>
+              <span class="quantity-value px-3 text-xs font-black text-slate-800 min-w-[28px] text-center select-none">1</span>
+              <button class="plus-btn w-7 h-7 rounded-full bg-white text-slate-600 hover:bg-brand hover:text-white flex items-center justify-center font-bold text-sm shadow-sm transition-colors">+</button>
+            </div>
+            <button class="buy-btn flex-1 bg-brand hover:bg-brand-dark text-white font-black text-xs tracking-widest uppercase py-3.5 px-4 rounded-xl shadow-md transition-all duration-200">BUY</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card group w-full max-w-[340px] mx-auto bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col h-full relative cursor-pointer"
+        data-product-id="premium-cotton-shirt"
+        data-product-name="Premium Quality Cotton Shirt"
+        data-price="510"
+        data-old-price="600"
+        data-image="https://images.unsplash.com/photo-1505022610485-0249ba5b3675?auto=format&fit=crop&w=300&q=80"
+        data-min="10"
+        data-max="200">
+        <div class="p-4 bg-slate-50/50 rounded-t-2xl flex flex-col items-center justify-center grow relative aspect-square">
+          <div class="absolute top-3 left-3 border border-brand/20 rounded-full px-3 py-1 bg-white shadow-sm">
+            <span class="text-[9px] font-extrabold tracking-tight text-brand uppercase">BESTSELLER</span>
+          </div>
+          <div class="absolute top-3 right-3 w-10 h-10 rounded-full bg-emerald-500 text-white flex items-center justify-center font-black text-xs shadow-sm">
+            -15%
+          </div>
+          <div class="w-full h-full rounded-xl bg-cover bg-center transition-transform duration-300 group-hover:scale-105" style="background-image: url('https://images.unsplash.com/photo-1505022610485-0249ba5b3675?auto=format&fit=crop&w=300&q=80');"></div>
+        </div>
+        <div class="p-5 flex flex-col gap-3">
+          <div>
+            <h3 class="text-base font-bold text-slate-800 tracking-tight leading-snug group-hover:text-brand transition-colors">Premium Quality Cotton Shirt</h3>
+            <span class="inline-block text-[10px] font-bold text-brand bg-teal-50 px-2.5 py-0.5 rounded-md mt-1.5">Fashclot Exclusives</span>
+          </div>
+          <div class="pt-3 border-t border-slate-100 flex justify-between items-center gap-2">
+            <div class="flex flex-col">
+              <span class="text-xs text-slate-400 line-through">৳600</span>
+              <span class="text-xl font-black text-brand">৳510<span class="text-[11px] font-medium text-slate-400">/pc</span></span>
+            </div>
+            <div class="text-right text-[11px] font-medium text-slate-400 space-y-0.5">
+              <div>Min: <span class="font-bold text-slate-700">10 pc</span></div>
+              <div>Max: <span class="font-bold text-slate-700">200 pc</span></div>
+            </div>
+          </div>
+          <div class="mt-2 pt-2 border-t border-slate-50 flex items-center justify-between gap-3">
+            <div class="quantity-controller flex items-center bg-slate-100 rounded-full p-1 border border-slate-200">
+              <button class="minus-btn w-7 h-7 rounded-full bg-white text-slate-600 hover:bg-brand hover:text-white flex items-center justify-center font-bold text-sm shadow-sm">−</button>
+              <span class="quantity-value px-3 text-xs font-black text-slate-800 min-w-[28px] text-center select-none">10</span>
+              <button class="plus-btn w-7 h-7 rounded-full bg-white text-slate-600 hover:bg-brand hover:text-white flex items-center justify-center font-bold text-sm shadow-sm">+</button>
+            </div>
+            <button class="buy-btn flex-1 bg-brand hover:bg-brand-dark text-white font-black text-xs tracking-widest uppercase py-3.5 px-4 rounded-xl shadow-md transition-all duration-200">BUY</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card group w-full max-w-[340px] mx-auto bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col h-full relative cursor-pointer"
+        data-product-id="classic-denim-casual"
+        data-product-name="Classic Denim Standard Casuals"
+        data-price="840"
+        data-old-price="1200"
+        data-image="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=300&q=80"
+        data-min="2"
+        data-max="50">
+        <div class="p-4 bg-slate-50/50 rounded-t-2xl flex flex-col items-center justify-center grow relative aspect-square">
+          <div class="absolute top-3 left-3 border border-brand/20 rounded-full px-3 py-1 bg-white shadow-sm">
+            <span class="text-[9px] font-extrabold tracking-tight text-brand uppercase">HOT PRICE</span>
+          </div>
+          <div class="absolute top-3 right-3 w-10 h-10 rounded-full bg-emerald-500 text-white flex items-center justify-center font-black text-xs shadow-sm">
+            -30%
+          </div>
+          <div class="w-full h-full rounded-xl bg-cover bg-center transition-transform duration-300 group-hover:scale-105" style="background-image: url('https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=300&q=80');"></div>
+        </div>
+        <div class="p-5 flex flex-col gap-3">
+          <div>
+            <h3 class="text-base font-bold text-slate-800 tracking-tight leading-snug group-hover:text-brand transition-colors">Classic Denim Standard Casuals</h3>
+            <span class="inline-block text-[10px] font-bold text-brand bg-teal-50 px-2.5 py-0.5 rounded-md mt-1.5">Denim Co.</span>
+          </div>
+          <div class="pt-3 border-t border-slate-100 flex justify-between items-center gap-2">
+            <div class="flex flex-col">
+              <span class="text-xs text-slate-400 line-through">৳1,200</span>
+              <span class="text-xl font-black text-brand">৳840<span class="text-[11px] font-medium text-slate-400">/pc</span></span>
+            </div>
+            <div class="text-right text-[11px] font-medium text-slate-400 space-y-0.5">
+              <div>Min: <span class="font-bold text-slate-700">2 pc</span></div>
+              <div>Max: <span class="font-bold text-slate-700">50 pc</span></div>
+            </div>
+          </div>
+          <div class="mt-2 pt-2 border-t border-slate-50 flex items-center justify-between gap-3">
+            <div class="quantity-controller flex items-center bg-slate-100 rounded-full p-1 border border-slate-200">
+              <button class="minus-btn w-7 h-7 rounded-full bg-white text-slate-600 hover:bg-brand hover:text-white flex items-center justify-center font-bold text-sm shadow-sm">−</button>
+              <span class="quantity-value px-3 text-xs font-black text-slate-800 min-w-[28px] text-center select-none">2</span>
+              <button class="plus-btn w-7 h-7 rounded-full bg-white text-slate-600 hover:bg-brand hover:text-white flex items-center justify-center font-bold text-sm shadow-sm">+</button>
+            </div>
+            <button class="buy-btn flex-1 bg-brand hover:bg-brand-dark text-white font-black text-xs tracking-widest uppercase py-3.5 px-4 rounded-xl shadow-md transition-all duration-200">BUY</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card group w-full max-w-[340px] mx-auto bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col h-full relative cursor-pointer"
+        data-product-id="premium-cozy-sweater"
+        data-product-name="Premium Cozy Winter Knitwear Sweater"
+        data-price="1350"
+        data-old-price="1500"
+        data-image="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=300&q=80"
+        data-min="5"
+        data-max="150">
+        <div class="p-4 bg-slate-50/50 rounded-t-2xl flex flex-col items-center justify-center grow relative aspect-square">
+          <div class="absolute top-3 left-3 border border-brand/20 rounded-full px-3 py-1 bg-white shadow-sm">
+            <span class="text-[9px] font-extrabold tracking-tight text-brand uppercase">TRENDING</span>
+          </div>
+          <div class="absolute top-3 right-3 w-10 h-10 rounded-full bg-emerald-500 text-white flex items-center justify-center font-black text-xs shadow-sm">
+            -10%
+          </div>
+          <div class="w-full h-full rounded-xl bg-cover bg-center transition-transform duration-300 group-hover:scale-105" style="background-image: url('https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=300&q=80');"></div>
+        </div>
+        <div class="p-5 flex flex-col gap-3">
+          <div>
+            <h3 class="text-base font-bold text-slate-800 tracking-tight leading-snug group-hover:text-brand transition-colors">Premium Cozy Winter Knitwear Sweater</h3>
+            <span class="inline-block text-[10px] font-bold text-brand bg-teal-50 px-2.5 py-0.5 rounded-md mt-1.5">CozyLine Fashion</span>
+          </div>
+          <div class="pt-3 border-t border-slate-100 flex justify-between items-center gap-2">
+            <div class="flex flex-col">
+              <span class="text-xs text-slate-400 line-through">৳1,500</span>
+              <span class="text-xl font-black text-brand">৳1,350<span class="text-[11px] font-medium text-slate-400">/pc</span></span>
+            </div>
+            <div class="text-right text-[11px] font-medium text-slate-400 space-y-0.5">
+              <div>Min: <span class="font-bold text-slate-700">5 pc</span></div>
+              <div>Max: <span class="font-bold text-slate-700">150 pc</span></div>
+            </div>
+          </div>
+          <div class="mt-2 pt-2 border-t border-slate-50 flex items-center justify-between gap-3">
+            <div class="quantity-controller flex items-center bg-slate-100 rounded-full p-1 border border-slate-200">
+              <button class="minus-btn w-7 h-7 rounded-full bg-white text-slate-600 hover:bg-brand hover:text-white flex items-center justify-center font-bold text-sm shadow-sm">−</button>
+              <span class="quantity-value px-3 text-xs font-black text-slate-800 min-w-[28px] text-center select-none">5</span>
+              <button class="plus-btn w-7 h-7 rounded-full bg-white text-slate-600 hover:bg-brand hover:text-white flex items-center justify-center font-bold text-sm shadow-sm">+</button>
+            </div>
+            <button class="buy-btn flex-1 bg-brand hover:bg-brand-dark text-white font-black text-xs tracking-widest uppercase py-3.5 px-4 rounded-xl shadow-md transition-all duration-200">BUY</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="bg-slate-900 text-slate-400 text-sm mt-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div class="space-y-4">
+        <a href="#" class="text-2xl font-black italic text-white tracking-tight">
+          EZ_Bebsha<span class="text-brand-accent">.</span>
+        </a>
+        <p class="text-xs leading-relaxed text-slate-400">
+          The ultimate premium wholesale and consumer marketplace solution. Providing curated boutique style and sustainable fashion statements since 2026.
+        </p>
+      </div>
+      <div>
+        <h4 class="text-white font-bold mb-4 tracking-wider text-xs uppercase">Customer Care</h4>
+        <ul class="space-y-2 text-xs">
+          <li><a href="#" class="hover:text-white transition-colors">Help Center</a></li>
+          <li><a href="#" class="hover:text-white transition-colors">Returns & Refunds</a></li>
+          <li><a href="#" class="hover:text-white transition-colors">Wholesale Policy</a></li>
+          <li><a href="#" class="hover:text-white transition-colors">Shipping Guide</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-bold mb-4 tracking-wider text-xs uppercase">Company Information</h4>
+        <ul class="space-y-2 text-xs">
+          <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
+          <li><a href="#" class="hover:text-white transition-colors">Sustainability Commitments</a></li>
+          <li><a href="#" class="hover:text-white transition-colors">Careers Marketplace</a></li>
+          <li><a href="#" class="hover:text-white transition-colors">Press Centers</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-bold mb-4 tracking-wider text-xs uppercase">Contact Channels</h4>
+        <p class="text-xs text-slate-400 leading-relaxed mb-2">Have wholesale business questions or bulk inquiry requests?</p>
+        <span class="text-white font-bold block text-sm">support@ezbebsha.com</span>
+      </div>
+    </div>
+    <div class="border-t border-slate-800 text-center py-6 text-xs tracking-wide text-slate-500">
+      &copy; 2026 EZ_Bebsha Global Platforms. All rights reserved explicitly.
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
